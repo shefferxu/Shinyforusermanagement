@@ -34,18 +34,19 @@ credentials <- data.frame(
   stringsAsFactors = FALSE
 )
 
-credentials <- rbind(dailydf,credentials)
+# credentials <- rbind(dailydf,credentials)
 
 # Create credentials DB (only once)
-create_db(
-  credentials_data = credentials,
-  sqlite_path = "credentials.sqlite",
-  # passphrase =passphrase
-)
+# create_db(
+#   credentials_data = credentials,
+#   sqlite_path = "credentials.sqlite",
+#   # passphrase =passphrase
+# )
 
 set_labels(
   language = "en",
-  "Please authenticate" = "登入页面",
+  "Please authenticate" = "",
   "Username:" = "用户名:",
-  "Password:" = "密码:"
+  "Password:" = "密码:",
+  "Login"="登录"
 )
